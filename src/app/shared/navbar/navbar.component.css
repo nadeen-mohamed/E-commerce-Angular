@@ -1,0 +1,21 @@
+.navbar{
+    background-color: #CCB07C;
+}
+.navbar-brand{
+    color: #926239;
+}
+.btn{
+    color: #926239;
+    border: 1px solid #926239;
+    
+}
+.btn:hover{
+    color: #CCB07C;
+    background-color: #926239;
+}
+.active-link {
+    color: brown;
+  }
+  .fa-cart-shopping{
+    color: #926239;
+  }

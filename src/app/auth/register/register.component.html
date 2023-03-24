@@ -1,0 +1,117 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+
+        </div>
+
+        <form [formGroup]="register" (ngSubmit)="handleSubmitForm()">
+            <div class="container py-5 ">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="card shadow-2-strong" style="border-radius: 1rem; border-color:#CCB07C ;">
+                            <div class="card-body p-5 text-center">
+
+                                <h3 class="mb-5">Register</h3>
+
+                                <div class="form-outline mb-4 input-group" style="margin-left: 20px;">
+
+                                    <input type="text"
+                                    class="form-control"
+                                    id="name"
+                                    aria-describedby="nameHelp"
+                                    placeholder="Enter Your Name Here"
+                                    formControlName="name"/>
+
+
+
+
+                                </div>
+                                <div *ngIf="register.controls['name'].touched && register.controls['name'].invalid" id="nameHelp">
+                                    <small class="text-danger" *ngIf="register.controls['name'].errors?.['minlength']">Min.length 3</small>
+       
+                                    <small class="text-danger" *ngIf="register.controls['name'].errors?.['required']">Enter Your Name</small>
+                                    </div>
+                                 <div>
+                                    <input type="text"
+                                    class="form-control"
+                                    id="Username"
+                                    aria-describedby="nameHelp"
+                                    placeholder="Enter Your User-Name Here"
+                                    formControlName="Username" 
+                                    pattern="^\S+$"
+                                    style="margin-left: 20px;"/>
+
+
+                                </div> 
+                                <div *ngIf="register.controls['Username'].touched && register.controls['Username'].invalid" id="nameHelp">
+                                    <small class="text-danger" *ngIf="register.controls['Username'].errors?.['required']">Enter Your User-Name</small>
+                                    <small class="text-danger" *ngIf="register.controls['Username'].errors?.['pattern']">Enter Your User-Name without space</small>
+                                    
+                                </div> 
+                               
+                                <div>
+                                    <div style="margin-top: 20px;">
+                                        <input type="email"
+                                        class="form-control"
+                                        id="email"
+                                        aria-describedby="email"
+                                        placeholder="Enter Your E-mail Here"
+                                        formControlName="email" 
+                                        style="margin-left: 20px;" email/>
+    
+    
+                                    </div>
+                                    <div *ngIf="register.controls['email'].touched && register.controls['email'].invalid" id="email">
+                                        <small class="text-danger" *ngIf="register.controls['email'].errors?.['required']">Enter Your E-mail</small>
+                                        <small class="text-danger " *ngIf="register.controls['email'].errors?.['email']">*PLEASE INTER Correct Format For Email *</small>
+                                    
+                                    </div>
+                                    <div style="margin-top: 20px;">
+                                        <input type="password"
+                                        class="form-control"
+                                        id="password"
+                                        aria-describedby="password"
+                                        placeholder="Enter Your password Here"
+                                        formControlName="password" 
+                                        style="margin-left: 20px;" 
+                                        pattern=""/>
+    
+    
+                                    </div>
+                                    <div *ngIf="register.controls['password'].touched && register.controls['password'].invalid" id="password">
+                                        <small class="text-danger" *ngIf="register.controls['password'].errors?.['required']">Enter Your Password</small>
+                                        <small class="text-danger" *ngIf="register.controls['password'].errors?.['pattern']"> Password must contain at least one number, one uppercase and a lowercase letter 
+                                            and at least 8 characters</small>
+
+                                    
+                                    </div>
+                                    <div style="margin-top: 20px;">
+                                        
+                                        <input type="confirmpassword"
+                                        class="form-control"
+                                        id="confirmpassword"
+                                        aria-describedby="confirmpassword"
+                                        placeholder="Confirm Password Here"
+                                        formControlName="confirmpassword" 
+                                        style="margin-left: 20px;" 
+                                        pattern=""/>
+    
+    
+                                    </div>
+                                    <button type="submit" class="btn " id="sign"
+                                        [disabled]="register.invalid">Register</button>
+                                </div>
+                                <p class="btn-separator my-30"><span style=" color: #CCB07C;">Already have account?
+                                </span></p>
+
+                            <a routerLink="/login" type="button" class="btn " id="sign">Login</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

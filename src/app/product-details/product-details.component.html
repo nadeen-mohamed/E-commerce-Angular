@@ -1,0 +1,21 @@
+<div class="card mb-3" style="max-width: 100%px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="singleproduct.image" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{singleproduct.title | lowercase }}</h5>
+         
+          
+         
+          
+          <p> Price : {{ singleproduct.price |currency:'EGP'}}</p>
+          <a class="btn " (click)="addProductToCart(singleproduct)">Add To Cart</a> &nbsp;
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+        <small >{{ singleproduct.category }}</small>
+      </div>
+  </div>

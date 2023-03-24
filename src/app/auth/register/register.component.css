@@ -1,0 +1,66 @@
+h3{
+    color: #926239;
+}
+*{
+    font-family: var(--font-family-rebrand);
+}
+
+.navbar-expand-lg{
+    position: fixed;
+}
+.logo{
+    width:5rem;
+}
+#basic-addon1{
+    background-color: white;
+    
+}
+#bt{
+    background-color: #14a800;
+    color: white;
+    border-radius:25px;
+}
+.btn-separator {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #926239;
+    line-height: .1em;
+    font-weight: 300;
+}
+.mb-30, .my-30 {
+    margin-bottom: 30px!important;
+}
+.mt-30, .my-30 {
+    margin-top: 30px!important;
+}
+.btn-separator span {
+    padding: 0 10px;
+    background: #fff;
+    color:#926239;
+    font-weight: bold;
+}
+
+#sign{
+    margin-top: 50px;
+}
+
+.btn{
+    color: #926239;
+    border: 1px solid #926239;
+    
+}
+.btn:hover{
+    color: #CCB07C;
+    background-color: #926239;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:#926239;
+    opacity: 1; /* Firefox */
+  }
+ input {
+    outline-color:  #CCB07C; 
+    border: 1px solid #CCB07C;
+     padding-left: 110px;
+    
+  }
+ 

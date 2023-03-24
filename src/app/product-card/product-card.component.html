@@ -1,0 +1,16 @@
+<div class="card h-100">
+  <img [src]="singleproduct.image" class="card-img-top " />
+  <div class="card-body">
+    <h2 class="card-title">{{ singleproduct.title | lowercase }}</h2>
+    <h3>{{singleproduct.price |currency:'EGP'}}</h3>
+   
+    <!-- <a  class="btn " type="submit" (click)="increaseCounter()"> Add to Cart</a> -->
+
+    &nbsp;
+    <a class="btn " [routerLink]="['product-details' , singleproduct.id]">Product-Details</a>
+
+  </div>
+  <div class="card-footer">
+    <small class="text">{{ singleproduct.category  }}</small>
+  </div>
+</div>

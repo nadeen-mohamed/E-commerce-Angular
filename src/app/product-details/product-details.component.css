@@ -1,0 +1,27 @@
+.card{
+    margin-top: 50px;
+    color:#926239;
+ border: 5px solid #926239;
+}
+
+.btn{
+    color: #926239;
+    background-color: #CCB07C;
+    border: 1px solid #926239;
+    
+}
+.btn:hover{
+    color: #CCB07C;
+    background-color: #926239;
+}
+.card-footer{
+   
+    background-color: #CCB07C;
+   
+}
+.text{
+    color: #926239;
+}
+h3{
+    color: #CCB07C;
+}

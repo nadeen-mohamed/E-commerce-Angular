@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+
+        </div>
+
+        <form #login="ngForm" (ngSubmit)="handleFormSubmit(login)">
+            <div class="container py-5 ">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="card shadow-2-strong" style="border-radius: 1rem; border-color:#CCB07C ;">
+                            <div class="card-body p-5 text-center">
+
+                                <h3 class="mb-5">LOG IN</h3>
+
+                                <div class="form-outline mb-4 input-group" style="margin-left: 25px;">
+
+                                    <input class=" form-control-lg" type="Email" class="form-control" id="Email"
+                                        aria-describedby="EmailHelp" placeholder="login Using Your E-mail" name="Email"
+                                        ngModel required #Email="ngModel" email/>
+
+
+
+
+                                </div>
+                                <div *ngIf="Email.touched && Email.invalid" id="EmailHelp">
+                                    <small class="text-danger " *ngIf="Email.errors?.['email']">*PLEASE INTER Correct Format For Email *</small>
+                                    <small class="text-danger" *ngIf="Email.errors?.['required']">*PLEASE INTER YOUR
+                                        E-mail*</small>
+                                </div>
+                                <div>
+                                    <input type="password" class="form-control" id="password"
+                                        aria-describedby="passwordHelp" placeholder="Enter Your Password"
+                                        name="password" ngModel required #password="ngModel"
+                                        style="margin-left: 20px;" />
+                                </div>
+                                <div *ngIf="password.touched && password.invalid" id="passwordHelp">
+                                    <small class="text-danger" *ngIf="password.errors?.['required']">*PLEASE INTER YOUR
+                                        Password*</small>
+
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn " id="sign"
+                                        [disabled]="login.invalid">Submit</button>
+                                </div>
+                                <p class="btn-separator my-30"><span style=" color: #CCB07C;">Don't have account?
+                                    </span></p>
+
+                                <a routerLink="/Register" type="button" class="btn " id="sign">Sign up</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
